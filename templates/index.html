@@ -53,9 +53,9 @@
               <div class="plainFile">
                 <label for="plainFile">File ban đầu</label>
                 <input type="file" id="plainFile" name="plainFile" />
-                <!-- Hiển thị thông báo lỗi -->
-                <span class="error-message" id="error-message"></span>
               </div>
+              <!-- Hiển thị thông báo lỗi -->
+              <span class="error-file" id="error-file"></span>
 
               <div class="primary-button">
                 <button
@@ -63,27 +63,16 @@
                   type="submit"
                   name = "button"
                   value="encrypt"
-                >
-                  <i class="fas fa-arrow-right" style="color: #ffffff"></i>Mã hóa
-                </button>
+                >Mã hóa</button>
 
                 <button
                   onclick="return validateInput()"
                   type="submit"
                   name = "button"
                   value="decrypt"
-                >
-                  <i class="fas fa-arrow-left" style="color: #ffffff"></i>Giải mã
-                </button>
+                >Giải mã</button>
               </div>
 
-              <!-- <div class="cipherFile">
-                <input type="file" id="cipherFile" name="cipherFile" />
-                <label for="cipherFile">File mã hóa</label>
-                <span class="error-message" id="error-message"></span>
-              </div> -->
-
-              <!-- tạo text area để hiển thị kết quả -->
               <div class="result">
                 <label for="result">Kết quả:</label>
                 <textarea
@@ -98,8 +87,8 @@
             </div>
 
             <span class="processing-time"
-              >Processing Time: {% if time %}{{time}}{% else %}0{%
-              endif%}ms</span
+              >Thời gian thực hiện: {% if time %}{{time}}{% else %}0{%
+              endif%} ms</span
             >
           </form>
         </div>
